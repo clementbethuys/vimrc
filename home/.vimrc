@@ -1,5 +1,3 @@
-
-
 " necessary setting for vundle
 set nocompatible
 
