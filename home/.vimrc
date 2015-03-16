@@ -18,7 +18,7 @@ Bundle 'L9'
 " git wrapper plugin
 Bundle 'tpope/vim-fugitive'
 " check syntax error for various languages
-Bundle 'Syntastic'
+" Bundle 'Syntastic'
 
 " allow quick comments using _
 Bundle 'tComment'
@@ -98,9 +98,9 @@ Bundle 'ctrlp.vim'
 Bundle 'snipMate'
 
 " complete all C based languages
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
 " this need the following intalling './install.sh --clang-completer'
-let g:acp_behaviorSnipmateLength=1
+" let g:acp_behaviorSnipmateLength=1
 
 " the best two themes imo
 Bundle 'molokai'
