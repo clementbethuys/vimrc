@@ -23,6 +23,9 @@ Bundle 'tpope/vim-fugitive'
 " allow quick comments using _
 Bundle 'tComment'
 
+" show all leader keys
+Bundle 'ktonga/vim-follow-my-lead'
+
 " better json handling and highlight
 Bundle 'elzr/vim-json'
 
@@ -54,8 +57,8 @@ map <F7> :NERDTreeToggle<CR>
 Bundle 'jistr/vim-nerdtree-tabs'
 
 " active nerdtree at startup, I prefer to disable
-" autocmd VimEnter * NERDTree
-" autocmd VimEnter * wincmd p
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
 
 " show git diff in the gutter
 Bundle 'airblade/vim-gitgutter'
@@ -108,6 +111,9 @@ Bundle 'Railscasts-Theme-GUIand256color'
 
 " automatically close quotes, I prefer to disable it
 Bundle 'delimitMate.vim'
+
+" set the <leader> key
+:let mapleader = ","
 
 " run rspec related to the file, below the shortcuts
 Bundle 'thoughtbot/vim-rspec'
@@ -173,12 +179,14 @@ set incsearch
 set showcmd
 set showmatch
 
-" display line numbers
+" display line numbers and line
 set number
+set cursorline
 
 " when not in copy paste auto indent by 2 spaces
 set autoindent
 set smartindent
 set tabstop=2
+set softtabstop=2
 set shiftwidth=2
 set expandtab
