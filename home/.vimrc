@@ -57,8 +57,8 @@ map <F7> :NERDTreeToggle<CR>
 Bundle 'jistr/vim-nerdtree-tabs'
 
 " active nerdtree at startup, I prefer to disable
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
+" autocmd VimEnter * NERDTree
+" autocmd VimEnter * wincmd p
 
 " show git diff in the gutter
 Bundle 'airblade/vim-gitgutter'
@@ -108,6 +108,7 @@ Bundle 'snipMate'
 " the best two themes imo
 Bundle 'molokai'
 Bundle 'Railscasts-Theme-GUIand256color'
+Bundle 'altercation/vim-colors-solarized'
 
 " automatically close quotes, I prefer to disable it
 Bundle 'delimitMate.vim'
@@ -142,11 +143,15 @@ au! BufRead,BufNewFile *.json set filetype=json
 " force .go file to be read as go
 au BufRead,BufNewFile *.go set filetype=go
 
+ " add/remove unused golang import
+let g:go_fmt_command = "goimports"
+
 " sudo save
 cmap w!! w !sudo tee > /dev/null %
 
 " far better go integration
 Bundle 'fatih/vim-go'
+Bundle 'vim-jp/vim-go-extra.git'
 set rtp+=$GOROOT/misc/vim
 
 " all the plugins must be before
@@ -157,16 +162,6 @@ filetype plugin indent on
 
 " allow sharing clipboard via yy with the os
 set clipboard=unnamed
-
-" I mostly copy/paste quickly
-set paste
-
-" use syntax hightligh with molokai theme
-syntax on
-
-" force to use 256 color (terminal) when loading coloscheme
-set t_Co=256
-colorscheme molokai
 
 " assume ruby files are chef files
 autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
@@ -190,3 +185,17 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
+
+" I mostly copy/paste quickly
+set paste
+
+" use syntax hightligh with molokai theme
+syntax on
+
+" force to use 256 color (terminal) when loading coloscheme
+set t_Co=256
+colorscheme mustang
+
+" tells vim our setup so it can adapt
+set background=dark
+let g:solarized_termcolors=256
