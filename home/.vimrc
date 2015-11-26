@@ -18,7 +18,7 @@ Bundle 'L9'
 " git wrapper plugin
 Bundle 'tpope/vim-fugitive'
 " check syntax error for various languages
-" Bundle 'Syntastic'
+Bundle 'Syntastic'
 
 " allow quick comments using _
 Bundle 'tComment'
@@ -63,6 +63,7 @@ Bundle 'jistr/vim-nerdtree-tabs'
 " show git diff in the gutter
 Bundle 'airblade/vim-gitgutter'
 " enable gitgutter at start
+
 autocmd VimEnter * GitGutterEnable
 let g:gitgutter_enabled = 1
 
@@ -101,11 +102,12 @@ Bundle 'ctrlp.vim'
 Bundle 'snipMate'
 
 " complete all C based languages
-" Bundle 'Valloric/YouCompleteMe'
-" this need the following intalling './install.sh --clang-completer'
-" let g:acp_behaviorSnipmateLength=1
+Bundle 'Valloric/YouCompleteMe'
 
-" the best two themes imo
+" this need the following intalling './install.sh --clang-completer'
+let g:acp_behaviorSnipmateLength=1
+
+" among the best themes
 Bundle 'molokai'
 Bundle 'Railscasts-Theme-GUIand256color'
 Bundle 'altercation/vim-colors-solarized'
@@ -143,16 +145,29 @@ au! BufRead,BufNewFile *.json set filetype=json
 " force .go file to be read as go
 au BufRead,BufNewFile *.go set filetype=go
 
- " add/remove unused golang import
-let g:go_fmt_command = "goimports"
-
-" sudo save
-cmap w!! w !sudo tee > /dev/null %
-
 " far better go integration
 Bundle 'fatih/vim-go'
 Bundle 'vim-jp/vim-go-extra.git'
 set rtp+=$GOROOT/misc/vim
+
+" better highlighting for golang
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+" add build/run shortcut for golang
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+
+" add/remove unused golang import
+let g:go_fmt_command = "goimports"
+
+" sudo save
+cmap w!! w !sudo tee > /dev/null %
 
 " all the plugins must be before
 call vundle#end()
