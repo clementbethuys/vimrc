@@ -18,7 +18,17 @@ Bundle 'L9'
 " git wrapper plugin
 Bundle 'tpope/vim-fugitive'
 " check syntax error for various languages
-Bundle 'Syntastic'
+" Bundle 'Syntastic'
+
+" good setup for syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " allow quick comments using _
 Bundle 'tComment'
