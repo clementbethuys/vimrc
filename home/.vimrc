@@ -199,8 +199,9 @@ set incsearch
 set showcmd
 set showmatch
 
-" display line numbers and line
+" display relative line numbers and cursor
 set number
+set relativenumber
 set cursorline
 
 " when not in copy paste auto indent by 2 spaces
