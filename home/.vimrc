@@ -74,6 +74,9 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'airblade/vim-gitgutter'
 " enable gitgutter at start
 
+" Add terraform syntax highlight
+Bundle 'vim-terraform'
+
 autocmd VimEnter * GitGutterEnable
 let g:gitgutter_enabled = 1
 
@@ -112,7 +115,7 @@ Bundle 'ctrlp.vim'
 Bundle 'snipMate'
 
 " complete all C based languages
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
 
 " this need the following intalling './install.sh --clang-completer'
 let g:acp_behaviorSnipmateLength=1
@@ -188,9 +191,6 @@ filetype plugin indent on
 " allow sharing clipboard via yy with the os
 set clipboard=unnamed
 
-" assume ruby files are chef files
-autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
-
 " terminal settings
 set encoding=utf-8
 
@@ -201,7 +201,7 @@ set showmatch
 
 " display relative line numbers and cursor
 set number
-set relativenumber
+" set relativenumber
 set cursorline
 
 " when not in copy paste auto indent by 2 spaces
