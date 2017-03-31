@@ -159,8 +159,8 @@ au! BufRead,BufNewFile *.json set filetype=json
 au BufRead,BufNewFile *.go set filetype=go
 
 " far better go integration
-Bundle 'fatih/vim-go'
-Bundle 'vim-jp/vim-go-extra.git'
+" Bundle 'fatih/vim-go'
+" Bundle 'vim-jp/vim-go-extra.git'
 set rtp+=$GOROOT/misc/vim
 
 " better highlighting for golang
