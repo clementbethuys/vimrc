@@ -16,25 +16,25 @@ Bundle 'editorconfig/editorconfig-vim'
 Bundle 'L9'
 
 " git wrapper plugin
-Bundle 'tpope/vim-fugitive'
+" Bundle 'tpope/vim-fugitive'
 " check syntax error for various languages
 " Bundle 'Syntastic'
 
 " good setup for syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 
 " allow quick comments using _
-Bundle 'tComment'
+" Bundle 'tComment'
 
 " show all leader keys
-Bundle 'ktonga/vim-follow-my-lead'
+" Bundle 'ktonga/vim-follow-my-lead'
 
 " better json handling and highlight
 Bundle 'elzr/vim-json'
@@ -49,11 +49,11 @@ Bundle 'ekalinin/Dockerfile.vim'
 Bundle 'bronson/vim-trailing-whitespace.git'
 
 " colorize brackets with differents colors
-Bundle 'rainbow_parentheses.vim'
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+" Bundle 'rainbow_parentheses.vim'
+" au VimEnter * RainbowParenthesesToggle
+" au Syntax * RainbowParenthesesLoadRound
+" au Syntax * RainbowParenthesesLoadSquare
+" au Syntax * RainbowParenthesesLoadBraces
 
 " nerdtree settings
 Bundle 'scrooloose/nerdtree.git'
@@ -87,9 +87,9 @@ let g:gitgutter_eager = 0
 set updatetime=750
 
 " vim status bar at the bottom
-Bundle 'Lokaltog/vim-powerline'
+" Bundle 'Lokaltog/vim-powerline'
 " fixing unicode symbol on mac for status bar
-let g:Powerline_symbols = 'unicode'
+" let g:Powerline_symbols = 'unicode'
 
 " display a panel with functions and variables, usefull for programming
 Bundle 'majutsushi/tagbar'
@@ -111,9 +111,6 @@ Bundle 'surround.vim'
 " fuzzy path searching, like sublime text
 Bundle 'ctrlp.vim'
 
-" snipet integration with vim TODO
-Bundle 'snipMate'
-
 " complete all C based languages
 " Bundle 'Valloric/YouCompleteMe'
 
@@ -126,17 +123,10 @@ Bundle 'Railscasts-Theme-GUIand256color'
 Bundle 'altercation/vim-colors-solarized'
 
 " automatically close quotes, I prefer to disable it
-Bundle 'delimitMate.vim'
+" Bundle 'delimitMate.vim'
 
 " set the <leader> key
 :let mapleader = ","
-
-" run rspec related to the file, below the shortcuts
-Bundle 'thoughtbot/vim-rspec'
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
 
 " navigate between split windows with letters
 nnoremap <C-h> <C-w>h
@@ -214,6 +204,9 @@ set expandtab
 
 " I mostly copy/paste quickly
 set paste
+
+" case insensitive search
+set ignorecase
 
 " use syntax hightligh with molokai theme
 syntax on
