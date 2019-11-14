@@ -204,6 +204,7 @@ set expandtab " use softtabstop when entering <tab>
 
 " I mostly copy/paste quickly
 set paste
+autocmd VimEnter * set paste
 
 " case insensitive search
 set ignorecase
